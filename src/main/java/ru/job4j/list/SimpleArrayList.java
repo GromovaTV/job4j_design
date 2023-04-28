@@ -1,6 +1,5 @@
 package ru.job4j.list;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class SimpleArrayList<T> implements List<T> {
