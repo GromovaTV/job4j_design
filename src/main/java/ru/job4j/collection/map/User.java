@@ -41,6 +41,11 @@ public class User {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash();
+    }
+
+    @Override
     public String toString() {
         return "User{"
                 + "name='" + name + '\''
