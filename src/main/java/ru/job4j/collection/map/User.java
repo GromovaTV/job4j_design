@@ -27,8 +27,17 @@ public class User {
 
     @SuppressWarnings("CheckStyle")
     @Override
-    public int hashCode() {
-        return Objects.hash(name, children, birthday);
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
+        User o = (User) obj;
+        return name == o.getName()
+                && children == o.getChildren()
+                && birthday == o.getBirthday();
     }
 
     @Override
