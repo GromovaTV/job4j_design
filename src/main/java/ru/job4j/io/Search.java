@@ -22,7 +22,7 @@ public class Search {
     }
 
     public static void validation(String[] args, Path start) {
-        if (args.length != 2) {
+        if (args.length < 2) {
             throw new IllegalArgumentException("Insufficient number of input parameters. Usage java -jar dir.jar ROOT_FOLDER SEARCH_PARAMETER.");
         }
         if (!start.toFile().exists()) {
