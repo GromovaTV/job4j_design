@@ -11,7 +11,7 @@ public class RoleStoreTest {
     @Test
     public void whenAddAndFindThenRoleIsAdmin() {
         RoleStore store = new RoleStore();
-        store.add(new Role( "1", "Admin"));
+        store.add(new Role("1", "Admin"));
         Role result = store.findById("1");
         assertThat(result.getRole(), is("Admin"));
     }
