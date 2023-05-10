@@ -11,6 +11,18 @@ public class Address {
         this.flat = flat;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public int getFlat() {
+        return flat;
+    }
+
     @Override
     public String toString() {
         return "Address{"

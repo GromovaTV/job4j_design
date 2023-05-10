@@ -15,6 +15,18 @@ public class Person {
         this.property = property;
     }
 
+    public boolean isGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
     @Override
     public String toString() {
         return "Person{"
