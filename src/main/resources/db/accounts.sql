@@ -11,4 +11,3 @@ create table account(
 
 insert into client(name) values ('Ivan Petrov');
 insert into account(number, position_id) VALUES (123456, 1);
-select * from account;
