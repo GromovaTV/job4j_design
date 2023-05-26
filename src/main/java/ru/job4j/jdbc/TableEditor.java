@@ -9,13 +9,11 @@ import java.util.StringJoiner;
 public class TableEditor implements AutoCloseable {
     private Connection connection;
     private Properties properties;
-//    private Statement statement;
 
 
     public TableEditor(Properties properties) throws Exception {
         this.properties = properties;
         initConnection();
-//        this.statement = connection.createStatement();
     }
 
     private void initConnection() throws Exception {
@@ -36,7 +34,6 @@ public class TableEditor implements AutoCloseable {
         String sql = String.format(
                         "create table %s();", tableName
                 );
-//            statement.execute(sql);
         execute(sql);
         System.out.println(TableEditor.getTableScheme(connection, tableName));
 
