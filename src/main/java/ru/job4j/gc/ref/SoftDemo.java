@@ -9,7 +9,7 @@ public class SoftDemo {
         example1();
         //example2();
     }
-
+    
     private static void example1() {
         Object strong = new Object();
         SoftReference<Object> soft = new SoftReference<>(strong);
