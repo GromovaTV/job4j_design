@@ -1,7 +1,6 @@
 package ru.job4j.design.srp;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -13,9 +12,6 @@ public class MemStore implements Store {
         employees.add(em);
     }
 
-    public void sort(Comparator<Employee> comparator) {
-        employees.sort(comparator);
-    }
 
     @Override
     public List<Employee> findBy(Predicate<Employee> filter) {
