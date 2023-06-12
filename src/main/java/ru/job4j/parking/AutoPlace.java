@@ -21,7 +21,6 @@ public class AutoPlace implements Place {
     public boolean accept(Car car) {
         boolean res = car.getSize() == 1 && !this.occupied();
         if (res) {
-            this.setOccupied(true);
             System.out.println("Найдено место для легковой машины");
         }
         return res;

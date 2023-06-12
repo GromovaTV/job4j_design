@@ -1,6 +1,8 @@
 package ru.job4j.parking;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -89,6 +91,21 @@ public class ParkingTest {
         places.add(p);
         Parking parking = new Parking(places);
         parking.takeCar(truck);
+        assertFalse(parking.takeCar(bmw));
+    }
+
+    @Test
+    public void whenTake10AutoToAutoPlace() {
+        Car bmw = new Auto();
+        List<Place> places = new ArrayList<>(10);
+        Place p = new AutoPlace();
+        for (int i = 0; i < places.size(); i++) {
+            places.add(p);
+        }
+        Parking parking = new Parking(places);
+        for (int i = 0; i < places.size(); i++) {
+            parking.takeCar(bmw);
+        }
         assertFalse(parking.takeCar(bmw));
     }
 }

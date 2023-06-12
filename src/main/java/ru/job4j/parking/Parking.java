@@ -3,7 +3,7 @@ package ru.job4j.parking;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Parking implements CarService {
+public class Parking implements ParkingService {
     private List<Place> places;
 
     public Parking(List<Place> places) {
@@ -36,6 +36,7 @@ public class Parking implements CarService {
     public boolean takeCar(Car car) {
         for (Place place : places) {
             if (place.accept(car)) {
+                place.setOccupied(true);
                 return true;
             }
         }
