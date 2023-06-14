@@ -29,10 +29,11 @@ public class Warehouse implements Storage {
 
     @Override
     public List<Food> getAll() {
-        List<Food> res = new ArrayList<>();
-        for (Food food : foodList) {
-            res.add(food);
-        }
-        return res;
+        return new ArrayList<>(foodList);
+    }
+
+    @Override
+    public void removeAll() {
+        foodList.clear();
     }
 }
