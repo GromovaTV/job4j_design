@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WeakDemo {
+
     public static void main(String[] args) throws InterruptedException {
         example3();
         //example2();

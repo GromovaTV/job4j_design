@@ -3,10 +3,11 @@ package ru.job4j.food;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ControllQuality {
+public class ControlQuality {
+
     private List<Storage> storeList;
 
-    public ControllQuality(List<Storage> storeList) {
+    public ControlQuality(List<Storage> storeList) {
         this.storeList = storeList;
     }
     

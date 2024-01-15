@@ -8,6 +8,7 @@ import java.io.StringWriter;
 
 @XmlRootElement(name = "person")
 @XmlAccessorType(XmlAccessType.FIELD)
+
 public class Person {
 
     @XmlAttribute

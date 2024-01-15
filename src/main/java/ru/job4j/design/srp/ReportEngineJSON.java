@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class ReportEngineJSON implements Report {
+
     private Store store;
 
     public ReportEngineJSON(Store store) {

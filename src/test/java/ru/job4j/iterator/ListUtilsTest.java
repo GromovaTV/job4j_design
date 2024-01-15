@@ -1,12 +1,16 @@
 package ru.job4j.iterator;
-import org.hamcrest.core.Is;
+
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import static org.junit.Assert.assertThat;
+
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 public class ListUtilsTest {
+
     @Test
     public void whenAddBefore() {
         List<Integer> input = new ArrayList<>(Arrays.asList(1, 3));

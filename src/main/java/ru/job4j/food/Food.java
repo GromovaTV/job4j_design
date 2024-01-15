@@ -3,6 +3,7 @@ package ru.job4j.food;
 import java.time.LocalDate;
 
 public class Food {
+
     protected String name;
     protected LocalDate expiryDate;
     protected LocalDate createDate;

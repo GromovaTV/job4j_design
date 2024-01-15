@@ -3,6 +3,7 @@ package ru.job4j.serialization.json;
 import java.util.Arrays;
 
 public class Person {
+
     private final boolean gender;
     private final int age;
     private final Address address;

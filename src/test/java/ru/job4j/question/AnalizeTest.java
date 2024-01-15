@@ -1,4 +1,5 @@
 package ru.job4j.question;
+
 import org.junit.Test;
 
 import java.util.Set;
@@ -7,6 +8,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class AnalizeTest {
+
     @Test
     public void whenNotChanged() {
         User u1 = new User(1, "A");

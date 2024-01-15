@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Properties;
 
 public class ImportDB {
+
     private Properties cfg;
     private String dump;
 
@@ -54,6 +55,7 @@ public class ImportDB {
     }
 
     private static class User {
+
         String name;
         String email;
 

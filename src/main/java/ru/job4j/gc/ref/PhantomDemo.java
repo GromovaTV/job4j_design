@@ -8,12 +8,16 @@ import java.util.ListIterator;
 import java.util.concurrent.TimeUnit;
 
 public class PhantomDemo {
+
     private static class MyPhantom extends PhantomReference<String> {
+
         private String name;
+
         public MyPhantom(String referent, ReferenceQueue<? super String> q, String name) {
             super(referent, q);
             this.name = name;
         }
+
         @Override
         public String get() {
             return name;
@@ -21,12 +25,15 @@ public class PhantomDemo {
     }
 
     private static class PhantomStorage {
+
         private ReferenceQueue<String> queue = new ReferenceQueue<>();
         private List<MyPhantom> phantoms = new LinkedList<>();
+
         public void add(String someData) {
             MyPhantom phantom = new MyPhantom(someData, queue, "my ref");
             phantoms.add(phantom);
         }
+
         public void utilizeResource() {
             for (ListIterator<MyPhantom> i = phantoms.listIterator(); i.hasNext();) {
                 MyPhantom current = i.next();

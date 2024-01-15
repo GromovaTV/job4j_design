@@ -3,6 +3,7 @@ package ru.job4j.cache;
 import java.util.Scanner;
 
 public class Emulator {
+
     private AbstractCache dc;
 
     public void setDC(String name) {
@@ -12,7 +13,7 @@ public class Emulator {
 
     public void init() {
         Scanner in = new Scanner(System.in);
-        while(true) {
+        while (true) {
             System.out.println("Выберите действие:\n 1. Указать директорию\n "
                     + "2. Загрузить файл\n 3. Получить файл\n 4. Выход");
             String input = in.nextLine();

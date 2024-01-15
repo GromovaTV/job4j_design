@@ -1,6 +1,7 @@
 package ru.job4j.ood.isp.menu;
 
 public class SimpleMenuPrinter implements MenuPrinter {
+
     private Menu menu;
 
     public SimpleMenuPrinter(Menu menu) {

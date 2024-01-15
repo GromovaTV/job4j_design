@@ -3,6 +3,7 @@ package ru.job4j.ood.isp.menu;
 import java.util.*;
 
 public class SimpleMenu implements Menu {
+
     private final List<MenuItem> rootElements = new ArrayList<>();
 
     @Override
@@ -19,15 +20,6 @@ public class SimpleMenu implements Menu {
         }
         return false;
     }
-
-//    public static void main(String[] args) {
-////        SimpleMenuItem item1 = new SimpleMenuItem("item1", () -> System.out.println("act1"));
-////        SimpleMenuItem item2 = new SimpleMenuItem("item1", () -> System.out.println("act1"));
-//        SimpleMenu menuItem = new SimpleMenu();
-//        menuItem.add(null, "item1", () -> System.out.println("act1"));
-//        menuItem.add(null, "item2", () -> System.out.println("act2"));
-//        menuItem.add("item1", "item3", () -> System.out.println("act3"));
-//    }
 
     @Override
     public Optional<MenuItemInfo> select(String itemName) {
@@ -46,6 +38,7 @@ public class SimpleMenu implements Menu {
     }
 
     public class MenuItemInfoIterator implements Iterator<MenuItemInfo> {
+
         private DFSIterator dfsi = new DFSIterator();
 
         @Override
@@ -76,6 +69,7 @@ public class SimpleMenu implements Menu {
     }
 
     private static class SimpleMenuItem implements MenuItem {
+
         private String name;
         private List<MenuItem> children = new ArrayList<>();
         private ActionDelegate actionDelegate;
@@ -111,8 +105,10 @@ public class SimpleMenu implements Menu {
     }
 
     private class DFSIterator implements Iterator<ItemInfo> {
+
         Deque<MenuItem> stack = new LinkedList<>();
         Deque<String> numbers = new LinkedList<>();
+
         DFSIterator() {
             int number = 1;
             for (MenuItem item : rootElements) {
@@ -144,8 +140,10 @@ public class SimpleMenu implements Menu {
     }
 
     private class ItemInfo {
+
         MenuItem menuItem;
         String number;
+
         public ItemInfo(MenuItem menuItem, String number) {
             this.menuItem = menuItem;
             this.number = number;

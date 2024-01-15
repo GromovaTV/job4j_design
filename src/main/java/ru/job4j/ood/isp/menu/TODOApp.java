@@ -3,7 +3,9 @@ package ru.job4j.ood.isp.menu;
 import java.util.Scanner;
 
 public class TODOApp {
+
     public static final ActionDelegate STUB_ACTION = System.out::println;
+
     public static void main(String[] args) {
         Menu menu = new SimpleMenu();
         MenuPrinter printer = new SimpleMenuPrinter(menu);

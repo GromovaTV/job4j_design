@@ -1,6 +1,7 @@
 package ru.job4j.parking;
 
 public class AutoPlace implements Place {
+
     private boolean occupied;
 
     public AutoPlace() {

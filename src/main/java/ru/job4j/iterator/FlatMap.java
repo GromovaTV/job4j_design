@@ -1,10 +1,12 @@
 package ru.job4j.iterator;
+
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Collections;
 
 public class FlatMap<T> implements Iterator<T> {
+
     private final Iterator<Iterator<T>> data;
     private Iterator<T> cursor = Collections.emptyIterator();
 

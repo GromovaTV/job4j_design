@@ -3,6 +3,7 @@ package ru.job4j.serialization.json;
 import org.json.JSONObject;
 
 public class B {
+
     private A a;
 
     public A getA() {

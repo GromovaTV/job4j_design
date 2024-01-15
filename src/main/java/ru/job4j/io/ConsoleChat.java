@@ -9,6 +9,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class ConsoleChat {
+
     private static final String OUT = "закончить";
     private static final String STOP = "стоп";
     private static final String CONTINUE = "продолжить";

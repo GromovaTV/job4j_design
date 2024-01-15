@@ -1,6 +1,7 @@
 package ru.job4j.collection.list;
 
 public class Node<E> {
+
     E item;
     Node<E> next;
     Node<E> prev;

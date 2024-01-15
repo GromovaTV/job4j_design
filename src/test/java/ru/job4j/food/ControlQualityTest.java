@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class ControllQualityTest {
+public class ControlQualityTest {
 
     @Test
     public void whenTrash() {
@@ -20,9 +20,9 @@ public class ControllQualityTest {
         sl.add(warehouse);
         sl.add(shop);
         sl.add(trash);
-        ControllQuality cq = new ControllQuality(sl);
-        Food milk = new Milk("Milk", LocalDate.of(2023, 6, 10),
-                LocalDate.of(2023, 6, 5), 100, 0);
+        ControlQuality cq = new ControlQuality(sl);
+        Food milk = new Milk("Milk", LocalDate.now().minusDays(1),
+                LocalDate.now().minusDays(15), 100, 20);
         cq.allocate(milk);
         exp.add(milk);
         assertEquals(exp, trash.getAll());
@@ -38,9 +38,9 @@ public class ControllQualityTest {
         sl.add(warehouse);
         sl.add(shop);
         sl.add(trash);
-        ControllQuality cq = new ControllQuality(sl);
-        Food milk = new Milk("Milk", LocalDate.of(2023, 6, 30),
-                LocalDate.of(2023, 6, 11), 100, 0);
+        ControlQuality cq = new ControlQuality(sl);
+        Food milk = new Milk("Milk", LocalDate.now().plusDays(14),
+                LocalDate.now(), 100, 0);
         cq.allocate(milk);
         exp.add(milk);
         assertEquals(exp, warehouse.getAll());
@@ -56,9 +56,9 @@ public class ControllQualityTest {
         sl.add(warehouse);
         sl.add(shop);
         sl.add(trash);
-        ControllQuality cq = new ControllQuality(sl);
-        Food bread = new Bread("Bread", LocalDate.of(2023, 6, 30),
-                LocalDate.of(2023, 6, 1), 100, 0);
+        ControlQuality cq = new ControlQuality(sl);
+        Food bread = new Bread("Bread", LocalDate.now().plusDays(4),
+                LocalDate.now().minusDays(4), 100, 0);
         cq.allocate(bread);
         exp.add(bread);
         assertEquals(exp, shop.getAll());
@@ -75,9 +75,9 @@ public class ControllQualityTest {
         sl.add(warehouse);
         sl.add(shop);
         sl.add(trash);
-        ControllQuality cq = new ControllQuality(sl);
-        Food bread = new Bread("Bread", LocalDate.of(2023, 6, 12),
-                LocalDate.of(2023, 6, 1), 100, 0);
+        ControlQuality cq = new ControlQuality(sl);
+        Food bread = new Bread("Bread", LocalDate.now().plusDays(1),
+                LocalDate.now().minusDays(5), 100, 0);
         cq.allocate(bread);
         exp.add(bread);
         assertEquals(exp, shop.getAll());

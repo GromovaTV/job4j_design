@@ -1,6 +1,7 @@
 package ru.job4j.gc;
 
 public class GCDemo {
+
     private static final long KB = 1000;
     private static final long MB = KB * KB;
     private static final Runtime ENVIRONMENT = Runtime.getRuntime();

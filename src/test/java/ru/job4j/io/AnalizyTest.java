@@ -10,8 +10,10 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class AnalizyTest {
+
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
+
     @Test
     public void whenTwiceUnavailable() throws IOException {
         File source = folder.newFile("source.txt");

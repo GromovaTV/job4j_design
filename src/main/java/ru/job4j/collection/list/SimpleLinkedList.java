@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class SimpleLinkedList<E> implements List<E> {
+
     private List<E> list;
     private int size = 0;
     private Node<E> first;
@@ -38,6 +39,7 @@ public class SimpleLinkedList<E> implements List<E> {
 
     @Override
     public Iterator<E> iterator() {
+
         return new Iterator<E>() {
             private int index = 0;
             private int expectedModCount = modCount;

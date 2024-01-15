@@ -3,7 +3,9 @@ package ru.job4j.design.srp;
 import java.util.function.Predicate;
 
 public class ReportEngine implements Report {
+
     private Store store;
+
     public ReportEngine(Store store) {
         this.store = store;
     }

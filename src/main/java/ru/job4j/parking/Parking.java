@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Parking implements ParkingService {
+
     private List<Place> places;
 
     public Parking(List<Place> places) {

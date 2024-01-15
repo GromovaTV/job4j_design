@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DuplicatesVisitor extends SimpleFileVisitor<Path> {
+
     Map<FileProperty, Path> map = new HashMap();
 
     @Override

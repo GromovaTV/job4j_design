@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class ReportEngineHR implements Report {
+
     private Store store;
 
     public ReportEngineHR(Store store) {

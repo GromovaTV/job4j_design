@@ -1,10 +1,12 @@
 package ru.job4j.map;
+
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class SimpleMap<K, V> implements Map<K, V> {
+
     private static final float LOAD_FACTOR = 0.75f;
     private int capacity = 8;
     private int count = 0;
@@ -78,6 +80,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
     @Override
     public Iterator<K> iterator() {
         return new Iterator<K>() {
+
             private int index = 0;
             private int expectedModCount = modCount;
 
@@ -100,6 +103,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
     }
 
     private static class MapEntry<K, V> {
+
         K key;
         V value;
 

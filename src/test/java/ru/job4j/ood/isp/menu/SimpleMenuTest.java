@@ -1,10 +1,13 @@
 package ru.job4j.ood.isp.menu;
 
 import org.junit.Test;
+
 import java.util.List;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class SimpleMenuTest {
+
     public static final ActionDelegate STUB_ACTION = System.out::println;
 
     @Test

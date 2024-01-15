@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDemo {
+
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Config config = new Config("C:\\projects\\job4j_design\\app.properties");
         config.load();

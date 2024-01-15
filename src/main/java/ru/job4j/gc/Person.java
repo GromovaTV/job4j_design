@@ -1,6 +1,7 @@
 package ru.job4j.gc;
 
 public class Person {
+
     private int age;
     private String name;
 

@@ -6,8 +6,11 @@ import ru.job4j.collection.list.List;
 import ru.job4j.collection.list.SimpleLinkedList;
 
 import java.util.Iterator;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertThat;
+
 public class SimpleLinkedListTest {
+
     @Test
     public void whenAddAndGet() {
         List<Integer> list = new SimpleLinkedList<>();

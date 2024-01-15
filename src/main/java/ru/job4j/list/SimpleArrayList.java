@@ -3,6 +3,7 @@ package ru.job4j.list;
 import java.util.*;
 
 public class SimpleArrayList<T> implements List<T> {
+
     private T[] container;
     private int size;
     private int modCount;
@@ -57,6 +58,7 @@ public class SimpleArrayList<T> implements List<T> {
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
+
             private int index = 0;
             private int expectedModCount = modCount;
 

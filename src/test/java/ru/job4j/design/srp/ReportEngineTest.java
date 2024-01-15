@@ -13,6 +13,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class ReportEngineTest {
+
     @Test
     public void whenOldGenerated() {
         MemStore store = new MemStore();
@@ -131,8 +132,8 @@ public class ReportEngineTest {
         ZonedDateTime zonedDateTime = now.toInstant().atZone(ZoneId.systemDefault());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
         String formattedDateTime = zonedDateTime.format(formatter);
-        String expect = String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
-                "<employees>\n"
+        String expect = String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n"
+                + "<employees>\n"
                 + "    <employee>\n"
                 + "        <fired>%s</fired>\n"
                 + "        <hired>%s</hired>\n"

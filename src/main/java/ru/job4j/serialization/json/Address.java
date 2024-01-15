@@ -1,6 +1,7 @@
 package ru.job4j.serialization.json;
 
 public class Address {
+
     private String city;
     private String street;
     private int flat;

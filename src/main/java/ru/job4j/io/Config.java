@@ -1,4 +1,5 @@
 package ru.job4j.io;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.util.Map;
 import java.util.StringJoiner;
 
 public class Config {
+
     private final String path;
     private final Map<String, String> values = new HashMap<String, String>();
 
@@ -32,7 +34,6 @@ public class Config {
     }
 
     public String value(String key) {
-        //throw new UnsupportedOperationException("Don't impl this method yet!");
         return values.get(key);
     }
 

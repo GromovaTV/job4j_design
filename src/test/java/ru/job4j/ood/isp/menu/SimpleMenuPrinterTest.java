@@ -1,11 +1,14 @@
 package ru.job4j.ood.isp.menu;
 
 import org.junit.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class SimpleMenuPrinterTest {
+
     @Test
     public void testPrint() {
         final ActionDelegate STUB_ACTION = System.out::println;

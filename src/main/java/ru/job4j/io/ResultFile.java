@@ -3,6 +3,7 @@ package ru.job4j.io;
 import java.io.FileOutputStream;
 
 public class ResultFile {
+
     public static void main(String[] args) {
         try (FileOutputStream out = new FileOutputStream("src/main/java/multiplicationTable.txt")) {
             int[][] data = new int[10][10];

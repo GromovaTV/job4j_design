@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class SearchVisitor  extends SimpleFileVisitor<Path> {
+
     private String typeSearch;
     private String key;
     private List<Path> list = new LinkedList<>();

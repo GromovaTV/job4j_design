@@ -1,8 +1,10 @@
 package ru.job4j.io.search;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ArgsNameSearch {
+
     private final Map<String, String> values = new HashMap<>();
 
     public String get(String key) {
@@ -30,11 +32,4 @@ public class ArgsNameSearch {
         names.parse(args);
         return names;
     }
-
-//    public static void main(String[] args) {
-//        ArgsNameSearch jvm = ArgsNameSearch.of(new String[] {"-Xmx=512", "-encoding=UTF-8"});
-//        System.out.println(jvm.get("Xmx"));
-//        ArgsNameSearch zip = ArgsNameSearch.of(new String[] {"-out=project.zip", "-encoding=UTF-8"});
-//        System.out.println(zip.get("out"));
-//    }
 }

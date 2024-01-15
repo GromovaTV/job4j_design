@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Warehouse implements Storage {
+
     private List<Food> foodList = new ArrayList<>();
 
     @Override

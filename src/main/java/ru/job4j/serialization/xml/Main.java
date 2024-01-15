@@ -7,6 +7,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 public class Main {
+
     public static void main(String[] args) throws Exception {
         Person person = new Person("Kate", 30, true,
                 new Contact("11-111"), new String[] {"Tom", "Jane"});

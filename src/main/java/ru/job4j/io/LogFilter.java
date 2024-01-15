@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LogFilter {
+
     public List<String> filter(String file) {
 
         List<String> list = new LinkedList<>();

@@ -13,6 +13,7 @@ import java.util.function.Predicate;
 
 @XmlRootElement(name = "employees")
 public class ReportEngineXML implements Report {
+
     private Store store;
 
     @XmlElement(name = "employee")
